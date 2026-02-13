@@ -2,6 +2,13 @@
   "name": "@aliuscode/gkd-subscription-url",
   "version": "0.0.0",
   "type": "module",
+  "gkd": {
+    "outDir": "dist",
+    "file": "AliusCode_gkd.json5",
+    "versionFile": "AliusCode_gkd.version.json5",
+    "changelog": "CHANGELOG.md",
+    "README": "README.md"
+  },
   "scripts": {
     "postinstall": "simple-git-hooks",
     "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
@@ -11,6 +18,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
+    "commit-msg": "pnpm exec commitlint --config commitlint.config.ts --edit ${1}",
     "pre-push": "pnpm run check"
   },
   "lint-staged": {
@@ -30,27 +38,30 @@
     "./dist"
   ],
   "dependencies": {
+    "@commitlint/cli": "20.2.0",
+    "@commitlint/config-conventional": "20.2.0",
+    "@commitlint/types": "20.2.0",
     "@eslint/js": "9.39.1",
     "@gkd-kit/api": "0.8.0",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
-    "@types/node": "24.10.1",
+    "@types/node": "25.0.0",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-unused-imports": "4.3.0",
     "json5": "2.2.3",
-    "lint-staged": "16.2.6",
-    "prettier": "3.6.2",
+    "lint-staged": "16.2.7",
+    "prettier": "3.7.4",
     "simple-git-hooks": "2.13.1",
-    "tsx": "4.20.6",
+    "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.4"
+    "typescript-eslint": "8.49.0"
   },
   "volta": {
-    "node": "24.11.1",
-    "pnpm": "10.22.0"
+    "node": "20.13.1"
   },
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.25.0",
+  "engineStrict": true,
   "engines": {
     "node": ">=22"
   }
