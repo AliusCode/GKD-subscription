@@ -65,6 +65,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 ## 感谢以下项目
 
 [gkd-kit/subscription](https://github.com/gkd-kit/subscription)
+
 [AIsouler/GKD_subscription](https://github.com/AIsouler/GKD_subscription)
 
 ## 感谢以下开发者的贡献
