@@ -5,11 +5,7 @@
 ## 本仓库继承自@AIsouler/GKD_subscription
 
 > 2026.02.15
-
-本仓库主要为自用，所有规则均根据本人使用习惯进行了删减留存，由于@AIsouler仓库维护时间已有两年之久，产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿难以维护，因此本仓库后续维护主要以主流APP为主，不再将类似APP合并至主分支，所有原仓库APP规则会经过筛选后逐步添加至本仓库。
-
-目前@AIsouler/GKD_subscription仓库有fork分支在维护，可以使用：[Lin-arm/GKD_subscription](https://github.com/Lin-arm/GKD_subscription)
-
+由于@AIsouler仓库维护时间已有两年之久，产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿难以维护，因此后续维护主要以主流APP为主，不再将类似APP合并至主分支，所有原仓库APP规则会经过筛选后逐步添加至本仓库。
 ---
 
 ## 声明
@@ -36,15 +32,10 @@
 
 复制以下任意一个链接到 GKD 即可使用本订阅规则
 
-- npmmirror源（国内镜像，推荐大陆用户使用）**暂时无法使用，先尝试jsDelivr源**
+- npmmirror源（国内镜像，推荐大陆用户使用）
 
 ```txt
 https://registry.npmmirror.com/@aliuscode/gkd-subscription/latest/files/dist/AliusCode_gkd.json5
-```
-
-- jsDelivr源
-```txt
-https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gkd.json5
 ```
 
 - GitHub源
@@ -53,9 +44,9 @@ https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gk
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v--VERSION--
+- 当前版本: v2
 
-- 当前订阅文件已适配 --APP_SIZE-- 个应用，共有 --GROUP_SIZE-- 应用规则组，--GLOBALGROUP_SIZE-- 全局规则组
+- 当前订阅文件已适配 2 个应用，共有 38 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +70,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=--VERSION--)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=2)
 
 ## Star History
 
