@@ -1,9 +1,40 @@
 name: build_release
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '0 19 * * *'
+  workflow_dispatch:
 
 jobs:
+  check_changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.changes.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: changes
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            prev_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "none")
+            if [ "$prev_tag" == "none" ]; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              if git diff --exit-code $prev_tag HEAD -- src; then
+                echo "No changes detected in 'src' directory between $prev_tag and the latest commit."
+                echo "changed=false" >> $GITHUB_OUTPUT
+              else
+                echo "changed=true" >> $GITHUB_OUTPUT
+              fi
+            fi
+          fi
+
   build_release:
+    needs: check_changes
+    if: ${{ needs.check_changes.outputs.changed == 'true' }}
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -14,7 +45,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 25
 
       - uses: pnpm/action-setup@v4
 
@@ -46,8 +77,9 @@ jobs:
           tags: true
 
       - name: Create Release
+        id: create_release
         if: ${{ steps.commit.outcome == 'success' }}
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
