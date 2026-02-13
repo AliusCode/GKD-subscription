@@ -1,0 +1,145 @@
+name: clean_actions_records
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+env:
+  RETENTION_DAYS: 1
+  API_RETRY_DELAY: 2
+  API_RETRY_COUNT: 3
+
+jobs:
+  clean-up:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - name: 记录开始时间
+        id: start_time
+        shell: bash
+        run: |
+          set -e
+          echo "开始记录时间..."
+          echo "start_ts=$(date +%s)" >> "$GITHUB_OUTPUT"
+
+      - name: 初始化运行环境
+        shell: bash
+        run: |
+          set -e
+          echo "当前时间(UTC): $(date -u)"
+          echo "保留天数: ${RETENTION_DAYS}"
+
+          if ! command -v gh >/dev/null 2>&1; then
+            echo "错误：GitHub CLI 未安装"
+            exit 1
+          fi
+
+          if ! command -v jq >/dev/null 2>&1; then
+            echo "安装 jq..."
+            sudo apt-get update -y
+            sudo apt-get install -y jq
+          fi
+
+      - name: 删除旧的工作流运行记录
+        id: cleanup
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          CUTOFF_DATE=$(date -u -d "${RETENTION_DAYS} days ago" +'%Y-%m-%d %H:%M:%SZ')
+          echo "将删除早于以下时间的运行记录: $CUTOFF_DATE"
+
+          TOTAL_DELETED=0
+
+          echo "获取工作流列表..."
+          mapfile -t WORKFLOWS < <(
+            gh api "repos/${{ github.repository }}/actions/workflows" \
+              --paginate \
+              --jq '.workflows[].id'
+          )
+
+          if [ "${#WORKFLOWS[@]}" -eq 0 ]; then
+            echo "仓库中没有工作流"
+            echo "total_deleted=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          for WORKFLOW_ID in "${WORKFLOWS[@]}"; do
+            echo "处理工作流: $WORKFLOW_ID"
+
+            mapfile -t RUNS < <(
+              gh api "repos/${{ github.repository }}/actions/workflows/${WORKFLOW_ID}/runs" \
+                --paginate \
+                --jq ".workflow_runs[]
+                  | select(.status | IN(\"completed\", \"expected\", \"failure\", \"in_progress\", \"pending\", \"queued\", \"requested\", \"startup_failure\", \"waiting\"))
+                  | select(.conclusion | IN(\"action_required\", \"cancelled\", \"failure\", \"neutral\", \"skipped\", \"stale\", \"success\", \"timed_out\"))
+                  | select(.created_at < \"$CUTOFF_DATE\")
+                  | .id"
+            )
+
+            if [ "${#RUNS[@]}" -eq 0 ]; then
+              echo "  此工作流没有需要删除的运行记录"
+              continue
+            fi
+
+            echo "  此工作流有 ${#RUNS[@]} 个运行记录需要删除"
+            TOTAL_DELETED=$((TOTAL_DELETED + ${#RUNS[@]}))
+
+            for RUN_ID in "${RUNS[@]}"; do
+              echo "    删除运行记录 ID: $RUN_ID"
+              for ((i=1;i<=API_RETRY_COUNT;i++)); do
+                if gh api -X DELETE "repos/${{ github.repository }}/actions/runs/${RUN_ID}" >/dev/null 2>&1; then
+                  echo "    删除成功"
+                  break
+                fi
+                echo "    删除失败，重试 $i/$API_RETRY_COUNT"
+                sleep "$API_RETRY_DELAY"
+              done
+              sleep 1
+            done
+          done
+
+          echo "total_deleted=$TOTAL_DELETED" >> "$GITHUB_OUTPUT"
+          echo "清理完成，共删除 $TOTAL_DELETED 个运行记录"
+
+      - name: 输出统计信息
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+
+          START_TS=${{ steps.start_time.outputs.start_ts }}
+          END_TS=$(date +%s)
+          DURATION=$((END_TS - START_TS))
+
+          echo "=============================="
+          echo "清理完成时间(UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "仓库名称: ${{ github.repository }}"
+          echo "触发方式: ${{ github.event_name }}"
+          echo ""
+          echo "保留策略: ${RETENTION_DAYS} 天"
+          echo "本次任务执行耗时: $((DURATION / 60))分$((DURATION % 60))秒"
+          echo "成功删除运行记录: ${{ steps.cleanup.outputs.total_deleted }} 个"
+
+          REMAINING=$(gh run list \
+            --repo "${{ github.repository }}" \
+            --limit 100000 \
+            --json databaseId \
+            --jq 'length' || echo 0)
+
+          echo "剩余运行记录: $REMAINING 个"
+
+          NEXT_UTC=$(date -u -d 'tomorrow 00:00' '+%Y-%m-%d %H:%M:%S')
+          NEXT_BJ=$(date -u -d 'tomorrow 08:00' '+%Y-%m-%d %H:%M:%S')
+
+          echo ""
+          echo "下次自动清理时间:"
+          echo "UTC: $NEXT_UTC"
+          echo "北京时间: $NEXT_BJ"
