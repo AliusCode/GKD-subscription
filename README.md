@@ -42,7 +42,7 @@
 https://registry.npmmirror.com/@aliuscode/gkd-subscription-url/latest/files/dist/AliusCode_gkd.json5
 ```
 
-- jsDelivr源
+- jsDelivr源**有大概一天的延迟，但可用**
 ```txt
 https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gkd.json5
 ```
@@ -53,9 +53,9 @@ https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gk
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v--VERSION--
+- 当前版本: v4
 
-- 当前订阅文件已适配 --APP_SIZE-- 个应用，共有 --GROUP_SIZE-- 应用规则组，--GLOBALGROUP_SIZE-- 全局规则组
+- 当前订阅文件已适配 115 个应用，共有 359 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=--VERSION--)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=4)
 
 ## Star History
 
