@@ -53,9 +53,9 @@ https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gk
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v--VERSION--
+- 当前版本: v3
 
-- 当前订阅文件已适配 --APP_SIZE-- 个应用，共有 --GROUP_SIZE-- 应用规则组，--GLOBALGROUP_SIZE-- 全局规则组
+- 当前订阅文件已适配 7 个应用，共有 43 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=--VERSION--)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=3)
 
 ## Star History
 
