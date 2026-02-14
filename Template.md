@@ -83,4 +83,4 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=AliusCode/GKD-subscription&type=Date)](https://star-history.com/#AliusCode/GKD-subscription&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=AliusCode/GKD-subscription&type=date&legend=top-left)](https://www.star-history.com/#AliusCode/GKD-subscription&type=date&legend=top-left)
