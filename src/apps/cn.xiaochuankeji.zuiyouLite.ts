@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '皮皮搞笑',
   groups: [
     {
-      key: -1,
+      key: 1,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
