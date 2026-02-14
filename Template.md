@@ -42,7 +42,7 @@
 https://registry.npmmirror.com/@aliuscode/gkd-subscription-url/latest/files/dist/AliusCode_gkd.json5
 ```
 
-- jsDelivr源
+- jsDelivr源**有大概一天的延迟，但可用**
 ```txt
 https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gkd.json5
 ```
