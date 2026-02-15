@@ -1,4 +1,7 @@
 import fs from 'node:fs/promises';
+// 添加内容
+import path from 'node:path';
+// 添加内容
 
 // 从 README.md 中解析出 GROUP_SIZE、GLOBALGROUP_SIZE 和 VERSION 的值
 const parseReadMeMd = async () => {
@@ -16,13 +19,45 @@ const parseReadMeMd = async () => {
   const GLOBALGROUP_SIZE = globalGroupSizeMatch ? globalGroupSizeMatch[1] : '';
   const VERSION = versionMatch ? versionMatch[1] : '';
 
-  return { APP_SIZE, GROUP_SIZE, GLOBALGROUP_SIZE, VERSION };
+  // 添加内容
+  // 原仓库应用总数
+  const APP_TOTAL = '886';
+  // 已筛选应用数量
+  const APP_SELECT = (parseInt(APP_TOTAL) - parseInt(APP_SIZE)).toString();
+  // 筛后剩余应用数
+  const appDirPath = path.join(process.cwd(), 'src/app');
+  const dirEntries = await fs.readdir(appDirPath, { withFileTypes: true });
+  const APP_RESIDUE = dirEntries
+    .filter((entry) => entry.isFile())
+    .length.toString();
+  // 删除的应用数量
+  const APP_DELETE = (parseInt(APP_SIZE) - parseInt(APP_RESIDUE)).toString();
+  // 添加内容
+
+  return {
+    APP_TOTAL,
+    APP_SELECT,
+    APP_RESIDUE,
+    APP_DELETE,
+    APP_SIZE,
+    GROUP_SIZE,
+    GLOBALGROUP_SIZE,
+    VERSION,
+  };
 };
 
 // 更新 README.md 的模板内容并写入文件
 export const updateReadMeMd = async () => {
-  const { APP_SIZE, GROUP_SIZE, GLOBALGROUP_SIZE, VERSION } =
-    await parseReadMeMd();
+  const {
+    APP_TOTAL,
+    APP_SELECT,
+    APP_RESIDUE,
+    APP_DELETE,
+    APP_SIZE,
+    GROUP_SIZE,
+    GLOBALGROUP_SIZE,
+    VERSION,
+  } = await parseReadMeMd();
 
   const mdTemplatePath = process.cwd() + '/Template.md';
   const readmeMdPath = process.cwd() + '/README.md';
@@ -32,10 +67,14 @@ export const updateReadMeMd = async () => {
 
   // 替换模板中的占位符
   const readMeMdText = mdTemplate
-    .replace('--APP_SIZE--', APP_SIZE)
+    .replaceAll('--APP_SIZE--', APP_SIZE)
     .replace('--GROUP_SIZE--', GROUP_SIZE)
     .replace('--GLOBALGROUP_SIZE--', GLOBALGROUP_SIZE)
-    .replaceAll('--VERSION--', VERSION);
+    .replaceAll('--VERSION--', VERSION)
+    .replace('--APP_TOTAL--', APP_TOTAL)
+    .replace('--APP_SELECT--', APP_SELECT)
+    .replace('--APP_RESIDUE--', APP_RESIDUE)
+    .replace('--APP_DELETE--', APP_DELETE);
 
   // 写入 README.md 文件
   await fs.writeFile(readmeMdPath, readMeMdText);
