@@ -8,11 +8,17 @@
 
 本仓库主要为自用，所有规则均进行了删减留存，由于@AIsouler仓库维护时间已有两年之久并停止维护，期间产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿，因此本仓库后续维护主要以主流APP为主，不再将类似APP的广告规则合并至主分支，**所有原仓库APP规则会经过筛选后逐步添加至本仓库。**
 
+
 ** 原仓库共含 --APP_TOTAL-- 个应用 **
+
 ** 已筛选 --APP_SELECT-- 个应用 **
+
 ** 删除了 --APP_DELETE-- 个应用 **
+
 ** 留存了 --APP_SIZE-- 个应用 **
+
 ** 还剩余 --APP_RESIDUE-- 个应用 **
+
 
 **目前@AIsouler/GKD_subscription仓库有fork分支在维护，可以使用：[Lin-arm/GKD_subscription](https://github.com/Lin-arm/GKD_subscription)**
 
