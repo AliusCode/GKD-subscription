@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: 'Gmail',
   groups: [
     {
-      key: 2,
+      key: 1,
       name: '分段广告-信息流广告',
       fastQuery: true,
       rules: [
