@@ -22,16 +22,16 @@ const parseReadMeMd = async () => {
   // 添加内容
   // 原仓库应用总数
   const APP_TOTAL = '886';
-  // 已筛选应用数量
-  const APP_SELECT = (parseInt(APP_TOTAL) - parseInt(APP_SIZE)).toString();
   // 筛后剩余应用数
   const appDirPath = path.join(process.cwd(), 'src/app');
   const dirEntries = await fs.readdir(appDirPath, { withFileTypes: true });
   const APP_RESIDUE = dirEntries
     .filter((entry) => entry.isFile())
     .length.toString();
+  // 已筛选应用数量
+  const APP_SELECT = (parseInt(APP_TOTAL) - parseInt(APP_RESIDUE)).toString();
   // 删除的应用数量
-  const APP_DELETE = (parseInt(APP_SIZE) - parseInt(APP_RESIDUE)).toString();
+  const APP_DELETE = (parseInt(APP_SELECT) - parseInt(APP_SIZE)).toString();
   // 添加内容
 
   return {

@@ -6,7 +6,19 @@
 
 > 2026.02.15
 
-本仓库主要为自用，所有规则均根据本人使用习惯进行了删减留存，由于@AIsouler仓库维护时间已有两年之久，产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿难以维护，因此本仓库后续维护主要以主流APP为主，不再将类似APP合并至主分支，**所有原仓库APP规则会经过筛选后逐步添加至本仓库。**
+本仓库主要为自用，所有规则均进行了删减留存，由于@AIsouler仓库维护时间已有两年之久并停止维护，期间产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿，因此本仓库后续维护主要以主流APP为主，不再将类似APP的广告规则合并至主分支，**所有原仓库APP规则会经过筛选后逐步添加至本仓库。**
+
+<div align="center">
+
+| 项目 | 数量 |
+| :---: | :---: |
+| 原仓库共 | **886** 个应用 |
+| 筛选了 | **721** 个应用 |
+| 删除了 | **-428** 个应用 |
+| 留存了 | **165** 个应用 |
+| 剩余了 | **593** 个应用 |
+
+</div>
 
 **目前@AIsouler/GKD_subscription仓库有fork分支在维护，可以使用：[Lin-arm/GKD_subscription](https://github.com/Lin-arm/GKD_subscription)**
 
@@ -53,9 +65,9 @@ https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gk
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v4
+- 当前版本: v5
 
-- 当前订阅文件已适配 115 个应用，共有 359 应用规则组，3 全局规则组
+- 当前订阅文件已适配 165 个应用，共有 516 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +91,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=4)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=5)
 
 ## Star History
 
