@@ -719,5 +719,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 22,
+      name: '全屏广告-小程序奖励形广告关闭',
+      desc: '读秒结束，点击关闭',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+          matches: [
+            '[text="广告"][visibleToUser=true]',
+            '[text="已获得奖励"][visibleToUser=true]',
+            '[text="关闭"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/3fac4559-1de6-4ecf-b0a3-a98fd797e7aa',
+          snapshotUrls: 'https://i.gkd.li/i/25409048',
+        },
+      ],
+    },
   ],
 });
