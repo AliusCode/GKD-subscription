@@ -303,12 +303,13 @@ export default defineGkdApp({
       // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
       priorityTime: 10000,
       activityIds: [
+        '.ui.LauncherUI',
         '.plugin.appbrand.ui.AppBrandUI',
         '.plugin.appbrand.launching.AppBrandLaunchProxyUI',
       ],
       rules: [
         {
-          actionDelay: 800, // 过早点击首次大概率跳不过
+          actionDelay: 1000, // 过早点击首次大概率跳不过
           matches: [
             '[text="广告"][visibleToUser=true]',
             '[text="跳过"][visibleToUser=true]',
@@ -318,6 +319,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13306883',
             'https://i.gkd.li/i/13407275',
             'https://i.gkd.li/i/15108441',
+            'https://i.gkd.li/i/25408824',
           ],
         },
       ],

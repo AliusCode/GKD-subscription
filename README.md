@@ -13,10 +13,10 @@
 | 项目 | 数量 |
 | :---: | :---: |
 | 原仓库共 | **886** 个应用 |
-| 筛选了 | **721** 个应用 |
-| 删除了 | **-428** 个应用 |
-| 留存了 | **165** 个应用 |
-| 剩余了 | **593** 个应用 |
+| 筛选了 | **366** 个应用 |
+| 删除了 | **176** 个应用 |
+| 留存了 | **190** 个应用 |
+| 剩余了 | **520** 个应用 |
 
 </div>
 
@@ -38,9 +38,9 @@
 
 - **仅启用 `开屏广告` 一类规则，其它所有规则均需用户手动打开，规则类别里可以批量开启某一类规则，建议按需开启规则，不要无脑开启规则，开启过多规则可能造成规则阻塞从而导致规则触发缓慢甚至不触发，并且规则开启越多耗电也越多 -> [点击查看耗电说明](https://gkd.li/guide/faq#power)**
 
-- **请求适配或报告问题 -> [点击反馈](https://github.com/AIsouler/GKD_subscription/issues/new/choose)**
+- **请求适配或报告问题 -> [点击反馈](https://github.com/AliusCode/GKD-subscription/issues/new/choose)**
 
-- **交流讨论（不要在这里反馈） -> [点击查看或开启讨论](https://github.com/AIsouler/GKD_subscription/discussions)**
+- **交流讨论（不要在这里反馈） -> [点击查看或开启讨论](https://github.com/AliusCode/GKD-subscription/discussions)**
 
 - **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./Selectors.md)**
 
@@ -65,9 +65,9 @@ https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gk
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v5
+- 当前版本: v6
 
-- 当前订阅文件已适配 165 个应用，共有 516 应用规则组，3 全局规则组
+- 当前订阅文件已适配 190 个应用，共有 602 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -91,7 +91,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=5)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=6)
 
 ## Star History
 
