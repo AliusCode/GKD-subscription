@@ -726,7 +726,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI00',
           matches: [
             '[text="广告"][visibleToUser=true]',
             '[text="已获得奖励"][visibleToUser=true]',
@@ -734,6 +734,20 @@ export default defineGkdApp({
           ],
           exampleUrls: 'https://e.gkd.li/3fac4559-1de6-4ecf-b0a3-a98fd797e7aa',
           snapshotUrls: 'https://i.gkd.li/i/25409048',
+        },
+      ],
+    },
+    {
+      key: 23,
+      name: '功能类-小米社区小程序【去签到】',
+      desc: '点击【去签到】',
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI00',
+          matches: '[text="每日签到"] < View + [text="去签到"]',
+          exampleUrls: 'https://e.gkd.li/9359c575-33f4-4dcd-b2c1-121171ead1e2',
+          snapshotUrls: 'https://i.gkd.li/i/25444607',
         },
       ],
     },
