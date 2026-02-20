@@ -69,10 +69,10 @@ export default defineGkdApp({
       key: 5,
       name: '功能类-立即签到',
       desc: '点击【立即签到】',
-      matchDelay: 1000,
       matchTime: 10000,
+      matchRoot: true,
+      actionDelay: 500,
       actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
           action: 'clickCenter',
