@@ -65,5 +65,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '功能类-立即签到',
+      desc: '点击【立即签到】',
+      matchDelay: 1000,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds: '.newbrowser.NormalWebActivity',
+          matches: '@TextView[text="立即签到"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/74b17c1e-e25b-48c6-8640-4b74cfe90008',
+          snapshotUrls: 'https://i.gkd.li/i/25440256',
+        },
+      ],
+    },
   ],
 });
