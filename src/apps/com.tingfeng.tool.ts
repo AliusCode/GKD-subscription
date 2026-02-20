@@ -11,16 +11,21 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
+          action: 'clickCenter',
           activityIds: [
             'com.windmill.sdk.widget.InterstitialView',
             'app.video.guoguo.MainActivity',
           ],
           matches:
-            '[vid="tobid_interstitial_skip_ll" || vid="tobid_splash_skip_ll"][clickable=true][visibleToUser=true] > [text="跳过"]',
-          exampleUrls: 'https://e.gkd.li/64670315-c171-42f9-a55a-5bedf29f24c3',
+            '[vid="tobid_interstitial_skip_ll" || vid="tobid_splash_skip_ll"][clickable=true][visibleToUser=true] > [text="跳过" || text="关闭"]',
+          exampleUrls: [
+            'https://e.gkd.li/64670315-c171-42f9-a55a-5bedf29f24c3',
+            'https://e.gkd.li/ef8e81a0-4ad6-4f11-a9f8-9f9103d93691',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/21278557',
             'https://i.gkd.li/i/21282765',
+            'https://i.gkd.li/i/25444737',
           ],
         },
         {
@@ -37,6 +42,22 @@ export default defineGkdApp({
     },
     {
       key: 2,
+      name: '全屏广告-开屏广告',
+      desc: '点击跳过&关闭',
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'app.video.guoguo.MainActivity',
+          matches:
+            'FrameLayout > [text*="跳过"][clickable=true][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/75e80f11-01b5-4959-864d-1b81df7402cd',
+          snapshotUrls: 'https://i.gkd.li/i/25444847',
+        },
+      ],
+    },
+    {
+      key: 3,
       name: '功能类-立即签到',
       desc: '点击【签到】',
       matchTime: 10000,
@@ -54,7 +75,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 4,
       name: '功能类-领取VIP',
       desc: '需开启【立即签到】，签到后点击【领取VIP】',
       rules: [
