@@ -85,26 +85,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '权限提示-通知权限',
-      desc: '点击x按钮，不开启系统通知',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules:
-        '[id="com.cmbchina.ccd.pluto.cmbActivity:id/btn_open_notify"] + [id="com.cmbchina.ccd.pluto.cmbActivity:id/iv_delete"]',
-      snapshotUrls: ['https://i.gkd.li/i/12647068'],
-    },
-    {
-      key: 5,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[text="定位服务"] +n * > [text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/i/14209071',
-    },
   ],
 });
