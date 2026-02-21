@@ -30,46 +30,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
-      name: '权限提示-通知权限',
-      desc: '自动点击暂不开启',
-      fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          activityIds: '.notifyguidev2.NotifyGuideV2Activity',
-          matches: '[text="暂不开启"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/18342279',
-        },
-      ],
-    },
-    {
-      key: 14,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      actionMaximumKey: 0,
-      rules: [
-        {
-          key: 0,
-          activityIds: ['.MainTabActivity', '.utils.WeiboDialog$CustomDialog'],
-          matches: '@[text="以后再说"] +2 [text="去开启"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13218093',
-            'https://i.gkd.li/i/13003311',
-          ],
-        },
-        {
-          key: 1,
-          activityIds: '.MainTabActivity',
-          matches:
-            '@[id="com.sina.weibo:id/btn_close"] +2 [text="使用您的位置信息"]',
-          snapshotUrls: 'https://i.gkd.li/i/13255595',
-        },
-      ],
-    },
-    {
       key: 17,
       name: '分段广告-信息流广告',
       desc: '点击关闭-点击[不感兴趣]/[不想看到此类内容]',
