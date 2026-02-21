@@ -127,7 +127,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '更新提示',
       fastQuery: true,
       matchTime: 10000,
@@ -142,18 +142,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: '[id="com.cainiao.wireless:id/gg_dialog_base_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13068573',
-    },
-    {
-      key: 6,
+      key: 4,
       name: '评价提示',
       fastQuery: true,
       actionMaximum: 1,
@@ -165,7 +154,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 5,
       name: '功能类-询问[是否要查询包裹]弹窗',
       desc: '点击[立即查看]',
       rules: [
@@ -181,7 +170,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
+      key: 6,
       name: '功能类-包裹页面-自动展开更多物流信息',
       desc: '点击[展开]',
       rules: [
@@ -196,7 +185,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 7,
       name: '其他-好友代取功能提示',
       rules: [
         {
