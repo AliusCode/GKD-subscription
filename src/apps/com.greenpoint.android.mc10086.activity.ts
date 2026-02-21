@@ -68,51 +68,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      desc: '请求推送通知弹窗，点击取消',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: 'com.mc10086.cmcc.base.StartPageActivity',
-          matches: ['[text*="开启推送通知"]', '[text="取消"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13327880',
-        },
-        {
-          key: 1,
-          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          matches: '[text="授权提醒"] +3 [text="拒绝"]',
-          snapshotUrls: 'https://i.gkd.li/i/13775652',
-        },
-      ],
-    },
-    {
-      key: 4,
-      name: '权限提示-请求获取剪贴板权限弹窗',
-      desc: '请求获取剪贴板权限弹窗，点击不允许',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: [
-        'com.mc10086.cmcc.view.tabs.AppTabFragment',
-        'com.mc10086.cmcc.base.StartPageActivity',
-      ],
-      rules: [
-        {
-          matches:
-            '[text*="获取您的"] < LinearLayout +(2) LinearLayout >(2) [text="不允许"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12662251',
-            'https://i.gkd.li/i/13775651',
-            'https://i.gkd.li/i/15944173',
-          ],
-        },
-      ],
-    },
-    {
-      key: 5,
       name: '局部广告-右侧悬浮小图标',
       fastQuery: true,
       rules: [
@@ -143,7 +98,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 4,
       name: '评价提示-请求好评弹窗',
       fastQuery: true,
       matchTime: 10000,
@@ -155,40 +110,6 @@ export default defineGkdApp({
           matches:
             '@[id="com.greenpoint.android.mc10086.activity:id/close_img"][desc="关闭"] - RelativeLayout >(2) [text$="好评"]',
           snapshotUrls: 'https://i.gkd.li/i/12662345',
-        },
-      ],
-    },
-    {
-      key: 7,
-      name: '权限提示-通讯录权限申请弹窗',
-      desc: '点击取消',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.cmccit.paycenter.PayCenterActivity',
-          matches: ['[text="通讯录权限申请"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/7d332325-497f-47a4-a322-729ffa5dd121',
-          snapshotUrls: 'https://i.gkd.li/i/16369235',
-        },
-      ],
-    },
-    {
-      key: 8,
-      name: '权限提示-定位权限',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          matches: [
-            '[text^="位置权限" || text$="定位权限"]',
-            '[text="取消"][clickable=true]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/i/23445705',
         },
       ],
     },
