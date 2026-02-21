@@ -55,15 +55,6 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '全屏广告-请求开启通知权限弹窗',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: '@[text="暂不开启"] +2 [text="开启通知权限"]',
-      snapshotUrls: 'https://i.gkd.li/i/13761671',
-    },
-    {
-      key: 5,
       name: '更新提示',
       desc: '点击"暂不升级"',
       fastQuery: true,
