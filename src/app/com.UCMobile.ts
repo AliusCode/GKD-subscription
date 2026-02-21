@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: 'UC浏览器',
   groups: [
     {
-      key: -1,
+      key: 0,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -34,7 +34,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 0,
+      key: 1,
       name: '分段广告-信息流广告',
       activityIds: 'com.uc.browser.InnerUCMobile',
       rules: [
@@ -59,21 +59,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.uc.browser.InnerUCMobile',
-          matches: '@ImageView - LinearLayout >n [text="开启消息通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/12880812',
-        },
-      ],
-    },
-    {
-      key: 11,
+      key: 2,
       name: '其他-请求添加桌面快捷方式弹窗',
       desc: '点击关闭',
       rules: [
