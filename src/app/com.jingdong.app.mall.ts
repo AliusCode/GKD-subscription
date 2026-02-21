@@ -80,37 +80,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: [
-            '.MainFrameActivity',
-            'com.jd.lib.message.messagecenter',
-          ],
-          matches:
-            '@ImageView[index=parent.childCount.minus(1)][clickable=true][visibleToUser=true] -n [text="开启消息通知"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13917163',
-            'https://i.gkd.li/i/13463618',
-            'https://i.gkd.li/i/14692570',
-            'https://i.gkd.li/i/18060234',
-          ],
-        },
-        {
-          key: 1,
-          activityIds: 'com.jd.lib.message.messagecenter',
-          matches: '@[clickable=true] + [text^="打开系统通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/12839865',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '全屏广告-弹窗广告',
       rules: [
