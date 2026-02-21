@@ -49,19 +49,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.messagebox.activity.TMMsgboxMainActivity',
-          matches: 'View[text="开启系统通知"] - View[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/13258215',
-        },
-      ],
-    },
   ],
 });
