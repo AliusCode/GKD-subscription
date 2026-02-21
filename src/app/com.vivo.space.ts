@@ -24,7 +24,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 1,
       name: '全屏广告-活动广告',
       fastQuery: true,
       matchTime: 10000,
@@ -39,22 +39,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13218155',
             'https://i.gkd.li/i/13292907',
           ],
-        },
-      ],
-    },
-    {
-      key: 4,
-      name: '权限提示-通知权限',
-      desc: '点击取消',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.VivoSpaceTabActivity',
-          matches: 'Button[id="com.vivo.space:id/vbutton_title"][text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/13771581',
         },
       ],
     },
