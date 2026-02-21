@@ -56,20 +56,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 1,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.tencent.qqmail.fragment.base.MailFragmentActivity',
-          matches: '[text="立刻开启"] - [text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/13043069',
-        },
-      ],
-    },
   ],
 });
