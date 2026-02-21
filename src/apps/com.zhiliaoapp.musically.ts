@@ -28,28 +28,6 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '权限提示-通知权限',
-      desc: '点击[暂时不要/稍后再说]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-          matches: [
-            '[text*="通知"][visibleToUser=true]',
-            '[text="暂时不要" || text="稍后再说"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/15944175',
-            'https://i.gkd.li/i/17963945',
-          ],
-        },
-      ],
-    },
-    {
-      key: 3,
       name: '局部广告-悬浮广告',
       desc: '点击关闭',
       rules: [
@@ -62,7 +40,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '全屏广告-好友推荐弹窗',
       desc: '点击关闭',
       rules: [
