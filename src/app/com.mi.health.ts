@@ -26,21 +26,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '权限提示-后台运行',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.xiaomi.fitness.main.MainActivity',
-          matches:
-            '[text="开启后台无限制"] + [id="com.mi.health:id/close_icon"]',
-          snapshotUrls: 'https://i.gkd.li/i/13495035',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告',
       fastQuery: true,
