@@ -46,22 +46,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.baidu.baidumaps.MapsActivity',
-          matches: '[vid="push_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/15284736',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '功能类-通勤卡添加至桌面',
       desc: '点击取消',
       fastQuery: true,
@@ -78,7 +62,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '全屏广告',
       rules: [
         {
@@ -90,7 +74,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '局部广告',
       rules: [
         {
