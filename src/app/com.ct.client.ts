@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '中国电信',
   groups: [
     {
-      key: -1,
+      key: 0,
       name: '开屏广告',
       fastQuery: true,
       matchTime: 10000,
@@ -92,29 +92,6 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      // fastQuery: true, 实机测试使用无法跳过
-      rules: [
-        {
-          key: 0,
-          matches: 'ImageView[id="com.ct.client:id/msg_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13043522',
-        },
-        {
-          key: 1,
-          fastQuery: true,
-          activityIds: 'com.ct.client.activity.MainActivity',
-          matches: '[text^="开启消息通知"] - [vid="ivClose"]',
-          snapshotUrls: 'https://i.gkd.li/i/15209597',
-        },
-      ],
-    },
-    {
-      key: 6,
       name: '功能类-右下角客服悬浮窗',
       desc: '点击关闭',
       rules: [
@@ -136,7 +113,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '局部广告-悬浮广告',
       desc: '点击关闭',
       actionMaximum: 1,
@@ -153,7 +130,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 7,
       name: '功能类-英文版未登录时自动一键登录',
       desc: '仅在使用该卡移动数据时可用',
       actionMaximum: 1,
