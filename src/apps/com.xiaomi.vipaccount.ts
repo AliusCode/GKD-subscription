@@ -71,15 +71,37 @@ export default defineGkdApp({
       desc: '点击【立即签到】',
       matchTime: 10000,
       matchRoot: true,
-      actionDelay: 500,
       actionMaximum: 1,
       rules: [
         {
           action: 'clickCenter',
           activityIds: '.newbrowser.NormalWebActivity',
-          matches: '@TextView[text="立即签到"][visibleToUser=true]',
+          matches: '[text="立即签到"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/74b17c1e-e25b-48c6-8640-4b74cfe90008',
           snapshotUrls: 'https://i.gkd.li/i/25440256',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '功能类-去微信小程序签到',
+      desc: '点击【去微信】',
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds: '.newbrowser.NormalWebActivity',
+          matches: [
+            '[text="已签到"][clickable=false][visibleToUser=false]',
+            '[desc="去微信"][clickable=true][visibleToUser=true]',
+          ],
+          exampleUrls: [
+            'https://e.gkd.li/e4814c1d-e6ae-49cf-aa0c-b7331139d1ff',
+            'https://e.gkd.li/06036a8d-cb0f-4291-9ce6-dec54084b460',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/25458816',
+            'https://i.gkd.li/i/25458818',
+          ],
         },
       ],
     },
