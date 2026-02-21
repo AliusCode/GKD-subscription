@@ -6,7 +6,7 @@
 
 > 2026.02.15
 
-本仓库主要为自用，所有规则均进行了删减留存，由于@AIsouler仓库维护时间已有两年之久并停止维护，期间产生了很多抽象或非主流APP（如动漫共和国、囧次元等广告多发且难以寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿，因此本仓库后续维护主要以主流APP为主，不再将类似APP的广告规则合并至主分支，**所有原仓库APP规则会经过筛选后逐步添加至本仓库。**
+本仓库主要为自用，所有规则均进行了删减留存，由于@AIsouler仓库维护时间已有两年之久并停止维护，期间产生了很多抽象或非主流APP（广告多发且无法寻找节点）的规则，加之广告也在不断更新、变化，导致仓库臃肿，因此本仓库后续维护主要以主流APP为主，不再将类似APP的广告规则合并至主分支，**所有原仓库APP规则会经过筛选后逐步添加至本仓库。**
 
 <div align="center">
 
@@ -48,15 +48,10 @@
 
 复制以下任意一个链接到 GKD 即可使用本订阅规则
 
-- npmmirror源（国内镜像，推荐大陆用户使用）**暂时无法使用，先尝试jsDelivr源**
+- CloudFlare源（国内镜像，推荐大陆用户使用）
 
 ```txt
-https://registry.npmmirror.com/@aliuscode/gkd-subscription-url/latest/files/dist/AliusCode_gkd.json5
-```
-
-- jsDelivr源**有大概一天的延迟，但可用**
-```txt
-https://fastly.jsdelivr.net/gh/AliusCode/GKD-subscription@main/dist/AliusCode_gkd.json5
+https://aliuscode-gkd-subscription.pages.dev/AliusCode_gkd.json5
 ```
 
 - GitHub源
