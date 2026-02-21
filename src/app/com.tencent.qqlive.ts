@@ -326,22 +326,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 20,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.ona.activity.SplashHomeActivity',
-          matches: '@[clickable=true] - [text*="开启通知"]',
-          exampleUrls: 'https://e.gkd.li/d16d04cb-8838-455c-9bc5-acebc936637b',
-          snapshotUrls: 'https://i.gkd.li/i/20368590',
-        },
-      ],
-    },
-    {
       key: 21,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
