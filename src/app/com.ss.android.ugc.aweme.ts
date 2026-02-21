@@ -57,35 +57,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      desc: '点击[暂不]/[以后再说]/[禁止]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: [
-        '.main.MainActivity',
-        '.profile.ui.UserProfileActivity',
-        '.detail.ui.DetailActivity',
-      ],
-      rules: [
-        {
-          key: 1,
-          matches: [
-            '[text^="打开私信通知" || text="开启朋友的消息通知" || text="及时获得消息提醒" || text$="评论回复提醒"][visibleToUser=true]',
-            '[text="以后再说" || text="暂不开启" || text="禁止"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13669790', //这些开启通知请求形式全都不一样！
-            'https://i.gkd.li/i/18417891',
-            'https://i.gkd.li/i/18419574',
-            'https://i.gkd.li/i/25024525',
-            'https://i.gkd.li/i/25063241',
-          ],
-        },
-      ],
-    },
-    {
       key: 11,
       name: '功能类-自动勾选原图',
       desc: '聊天发送图片时自动勾选原图',
@@ -199,26 +170,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 19,
-      name: '权限提示-通讯录权限',
-      desc: '点击[拒绝]',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.main.MainActivity',
-          matches: ['[text*="通讯录"]', '[text="拒绝"]'],
-          exampleUrls:
-            'https://m.gkd.li/57941037/8f70418d-92f0-4264-83fd-a680350c478e',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14735280',
-            'https://i.gkd.li/i/16171391',
-          ],
-        },
-      ],
-    },
-    {
       key: 20,
       name: '青少年模式',
       fastQuery: true,
@@ -242,32 +193,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14917848',
             'https://i.gkd.li/i/17610958',
           ],
-        },
-      ],
-    },
-    {
-      key: 21,
-      name: '权限提示-定位权限',
-      desc: '直接关闭所有类似形状窗口',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.search.activity.SearchResultActivity',
-      rules: [
-        {
-          key: 0,
-          name: '弹窗',
-          action: 'back',
-          matches: '[id="com.ss.android.ugc.aweme:id/rootview"]',
-          snapshotUrls: 'https://i.gkd.li/i/13755373',
-        },
-        {
-          key: 1,
-          name: '顶部横条',
-          activityIds: '.search.activity.SearchResultActivity',
-          matches: '@ImageView[clickable=true] - [text^="开启定位"]',
-          snapshotUrls: 'https://i.gkd.li/i/13755718',
         },
       ],
     },
@@ -421,21 +346,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25122077',
             'https://i.gkd.li/i/25122095',
           ],
-        },
-      ],
-    },
-    {
-      key: 28,
-      name: '权限提示-相机权限',
-      desc: '点击[以后再说]',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.shortvideo.ui.scan.ScanNewActivity',
-          matches: ['[text*="相机权限"]', '[text="以后再说"][clickable=true]'],
-          snapshotUrls: 'https://i.gkd.li/i/25183382',
         },
       ],
     },
