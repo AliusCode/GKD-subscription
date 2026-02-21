@@ -185,18 +185,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.pu.activity.act.ActivityApplyResult',
-          matches: ['[text^="打开系统消息通知"]', '[text="取消"]'],
-          snapshotUrls: 'https://i.gkd.li/i/23206833',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '功能类-打开应用自动进入部落',
       desc: '点击我的-我的部落-已通过-部落详情（如果有多个则点击第一个，仅开屏时触发一次）',
       rules: [
