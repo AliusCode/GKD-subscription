@@ -55,30 +55,6 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '权限提示-通知权限',
-      rules: [
-        {
-          key: 0,
-          fastQuery: true,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
-          activityIds: 'tv.danmaku.bili.MainActivityV2',
-          matches: ['[text="打开推送通知"]', '[text="暂不"]'],
-          exampleUrls: 'https://e.gkd.li/e67d6d21-f09b-44b0-bf91-8b9fa0670e27',
-          snapshotUrls: 'https://i.gkd.li/i/15907493',
-        },
-        {
-          key: 1,
-          activityIds: 'com.bilibili.vip.web.VipWebActivity',
-          matches:
-            '@Image < View + [id="subscribeContainer"] > [text="权益更新时推送通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/23714120',
-        },
-      ],
-    },
-    {
-      key: 5,
       name: '功能类-自动领取会员经验',
       rules: [
         {
@@ -94,7 +70,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '功能类-自动关闭故事模式',
       desc: '播放视频时退出竖屏模式',
       matchTime: 10000,
