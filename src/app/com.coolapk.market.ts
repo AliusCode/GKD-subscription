@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '酷安',
   groups: [
     {
-      key: -1,
+      key: 0,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -52,7 +52,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 0,
+      key: 1,
       name: '分段广告-信息流广告',
       fastQuery: true,
       activityIds: [
@@ -108,7 +108,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
+      key: 2,
       name: '更新提示',
       actionMaximum: 1,
       resetMatch: 'app',
@@ -134,27 +134,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.view.main.MainActivity',
-            '.view.splash.SplashActivity',
-          ],
-          matches: '[text="去开启"] - [text="以后再说"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13296465',
-            'https://i.gkd.li/i/20708984',
-          ],
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '局部广告-[大家还下载了]应用推荐',
       desc: '点击关闭',
       rules: [
@@ -174,7 +153,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '局部广告-信息流广告',
       desc: '点击关闭',
       rules: [
