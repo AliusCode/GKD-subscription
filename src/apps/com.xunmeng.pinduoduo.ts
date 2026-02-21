@@ -289,43 +289,6 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '权限提示-通知权限',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: '.ui.activity.HomeActivity',
-          matches:
-            'FrameLayout > ViewGroup[vid="pdd"] > ViewGroup > ViewGroup[childCount<3] > ViewGroup[childCount=3 || childCount=2] >(1,2) ImageView[clickable=true][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14109435',
-            'https://i.gkd.li/i/14549423',
-            'https://i.gkd.li/i/14662202', // 避免在此页面误触
-          ],
-        },
-        {
-          key: 1,
-          fastQuery: true,
-          action: 'back',
-          activityIds: [
-            '.ui.activity.HomeActivity',
-            '.activity.NewPageActivity',
-            '.ui.activity.MainFrameActivity',
-          ],
-          matches:
-            '[text="及时获取物流消息" || text="开启通知" || text="允许通知"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15004580',
-            'https://i.gkd.li/i/15048085',
-            'https://i.gkd.li/i/16643295',
-            'https://i.gkd.li/i/18371979',
-          ],
-        },
-      ],
-    },
-    {
-      key: 11,
       name: '全屏广告-[个性化推荐]弹窗',
       desc: '点击[取消]',
       fastQuery: true,
@@ -341,7 +304,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 12,
+      key: 11,
       name: '其他-登录提现页面点击[跳过]',
       rules: [
         {
@@ -354,7 +317,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
+      key: 12,
       name: '功能类-关闭截图后的弹窗',
       rules: [
         {
