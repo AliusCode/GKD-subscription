@@ -62,7 +62,7 @@ matches: [
 - 排除匹配，防止在一些安装页面误触 **（可快速查询！）**
 
 ```txt
-([text*="全部"][text*="更新" || text*="忽略"][text.length<7][visibleToUser=true]) || ([text^="继续" || text^="仍然" || text*="权限"][text.length<6][visibleToUser=true]) || ([text*="来源"][visibleToUser=true])
+([text*="全部"][text*="更新" || text*="忽略"][text.length<7][visibleToUser=true]) || ([text^="继续" || text^="仍然"][text.length<6][visibleToUser=true]) || ([text*="来源"][visibleToUser=true])
 ```
 
 ## 青少年模式（全局规则）
