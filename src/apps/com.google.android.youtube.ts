@@ -68,21 +68,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
-          matches: ['[text="开启通知"]', '[text="不用了"]'],
-          snapshotUrls: 'https://i.gkd.li/i/14194155',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '功能类-自动翻译评论',
       desc: '评论区自动点击[翻译成中文]',
       rules: [
@@ -103,7 +88,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '其他-关闭播放器辅助功能弹窗',
       desc: '点击[Dismiss]',
       rules: [
@@ -118,7 +103,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '功能类-关闭视频播放结束后的推荐视频',
       rules: [
         {
@@ -138,7 +123,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '局部广告',
       rules: [
         {
@@ -152,7 +137,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 7,
       name: '分段广告-播放页广告',
       rules: [
         {
