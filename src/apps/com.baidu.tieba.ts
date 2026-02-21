@@ -43,35 +43,6 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '权限提示-通知权限',
-      actionMaximum: 1,
-      rules: [
-        {
-          key: 0,
-          activityIds: '.pb.pb.main.PbActivity',
-          matches:
-            '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13536170',
-        },
-        {
-          key: 1,
-          activityIds: '.immessagecenter.mention.reply.ReplyMeActivity',
-          matches: 'TextView[text="开启消息推送"] +2 TextView[text="不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/13675694',
-        },
-        {
-          key: 2,
-          activityIds: 'com.baidu.tbadk.browser.TBWebContainerActivity',
-          matches: '[text="开启通知"] <n * > [text="暂不开启"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13804455',
-            'https://i.gkd.li/i/20918198',
-          ],
-        },
-      ],
-    },
-    {
-      key: 2,
       name: '分段广告-信息流广告',
       desc: '关闭广告、直播推广',
       fastQuery: true,
@@ -165,7 +136,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '局部广告-首页、推荐列表顶部卡片广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -180,7 +151,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '更新提示',
       fastQuery: true,
       matchTime: 10000,
@@ -196,7 +167,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '全屏广告-弹窗广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -234,7 +205,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '局部广告-悬浮小广告',
       matchDelay: 500,
       matchTime: 10000,
@@ -290,7 +261,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '局部广告-[帖子内/吧内]底部悬浮窗',
       fastQuery: true,
       actionMaximum: 1,
@@ -318,7 +289,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 7,
       name: '功能类-贴吧内签到并关闭弹窗',
       fastQuery: true,
       actionMaximum: 1,
@@ -351,7 +322,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '局部广告-帖子底部话题卡片',
       desc: '点击关闭',
       actionMaximum: 1,
@@ -367,7 +338,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
+      key: 9,
       name: '全屏广告-会员弹窗',
       desc: '点击关闭',
       rules: [
@@ -391,7 +362,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 10,
       name: '局部广告-信息流广告',
       desc: '点击关闭',
       fastQuery: true,
@@ -438,7 +409,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 12,
+      key: 11,
       name: '局部广告-感兴趣的吧推广',
       desc: '关闭首页、吧内其他贴吧的推广',
       rules: [
