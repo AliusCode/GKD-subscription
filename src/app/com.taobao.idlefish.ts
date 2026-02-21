@@ -5,38 +5,6 @@ export default defineGkdApp({
   name: '闲鱼',
   groups: [
     {
-      key: 1,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity',
-          matches:
-            '@ImageView[clickable=true][desc=null] < [desc^="开启系统通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13538351',
-        },
-      ],
-    },
-    {
-      key: 2,
-      name: '权限提示-手机信息权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.maincontainer.activity.MainActivity',
-          matches: ['[text*="手机信息权限"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/81e3e4d8-f297-4476-b22c-73f0b97879ee',
-          snapshotUrls: 'https://i.gkd.li/i/13620277',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '更新提示',
       fastQuery: true,
