@@ -49,39 +49,6 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: [
-            '.index.v2.IndexActivityV2',
-            '.notification.NotificationAuthorizationTranslucentActivity',
-            'com.xingin.matrix.notedetail.r10.comment.r10.NoteCommentActivity',
-            'com.xingin.authorization.NotificationAuthorizationTranslucentActivity',
-          ],
-          matches:
-            '@ImageView[clickable=true][visibleToUser=true] - LinearLayout > [text^="打开通知" || text^="Enable notifications"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13195753',
-            'https://i.gkd.li/i/13222356',
-            'https://i.gkd.li/i/13255627',
-            'https://i.gkd.li/i/16918033',
-            'https://i.gkd.li/i/18417785',
-          ],
-        },
-        {
-          key: 1,
-          activityIds: '.index.v2.IndexActivityV2',
-          matches: '@ImageView <2 FrameLayout - [text^="打开通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13250418',
-        },
-      ],
-    },
-    {
-      key: 2,
       name: '更新提示',
       fastQuery: true,
       matchTime: 10000,
@@ -114,7 +81,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '分段广告-信息流广告',
       desc: '长按"赞助"/"广告"标识的卡片-点"不感兴趣"',
       fastQuery: true,
@@ -146,7 +113,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '全屏广告-优惠券弹窗',
       rules: [
         {
@@ -160,7 +127,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '评价提示-评分弹窗',
       desc: '返回关闭弹窗',
       fastQuery: true,
@@ -178,7 +145,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '功能类-评论区-自动展开回复',
       desc: '自动展开更多回复',
       rules: [
@@ -192,7 +159,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '局部广告-你可能感兴趣的人',
       rules: [
         {
@@ -204,7 +171,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 7,
       name: '局部广告-关闭首页信息流中推荐博主',
       rules: [
         {
@@ -217,7 +184,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '局部广告-直播间各种卡片',
       activityIds: 'com.xingin.alpha.audience.v2.AlphaAudienceActivityV2',
       rules: [
