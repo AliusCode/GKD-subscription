@@ -149,32 +149,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.taobao.android.tbabilitykit.pop.StdPopContainerActivity',
-            'com.taobao.tao.TBMainActivity',
-            'com.taobao.tao.welcome.Welcome',
-          ],
-          matches:
-            '@Image[childCount=0][visibleToUser=true][text!=null] <n View >(1,2) [visibleToUser=true][text*="消息通知" || text*="系统通知"] <<n [vid="poplayer_inner_view"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13446901',
-            'https://i.gkd.li/i/13455424',
-            'https://i.gkd.li/i/15104645',
-            'https://i.gkd.li/i/18407606',
-            'https://i.gkd.li/i/21789921',
-          ],
-        },
-      ],
-    },
-    {
       key: 9,
       name: '功能类-各级页面添加到首页弹窗',
       desc: '点击退出',
@@ -257,27 +231,6 @@ export default defineGkdApp({
           action: 'clickCenter',
           matches: 'View[text="立即添加"] + View[text="取消"]',
           snapshotUrls: 'https://i.gkd.li/i/13598578',
-        },
-      ],
-    },
-    {
-      key: 15,
-      name: '权限提示-悬浮窗权限',
-      desc: '点击[否]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity',
-            'com.taobao.taolive.sdk.permisson.PermissionActivity',
-          ],
-          matches: ['[text*="悬浮窗权限"]', '[text="否" || text="暂不"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13588165',
-            'https://i.gkd.li/i/23146078',
-          ],
         },
       ],
     },
