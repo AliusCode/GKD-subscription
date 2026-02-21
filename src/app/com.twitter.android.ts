@@ -177,23 +177,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '权限提示-通知权限',
-      desc: '点击"Not now"',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.twitter.app.main.MainActivity',
-          matches:
-            '@[clickable=true] > [visibleToUser=true][text="Not now"] <<n [vid="half_cover_recycler_view_holder"]',
-          snapshotUrls: 'https://i.gkd.li/i/13930126',
-        },
-      ],
-    },
-    {
       key: 6,
       name: '功能类-自动点击翻译',
       rules: [
