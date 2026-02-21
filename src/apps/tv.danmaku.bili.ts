@@ -169,29 +169,6 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.MainActivityV2',
-            'com.bilibili.video.story.StoryTransparentActivity',
-            'com.bilibili.teenagersmode.ui.TeenagersModeDialogActivity',
-          ],
-          matches: '[text$="通知"] +2 * > [id="tv.danmaku.bili:id/close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13229159',
-            'https://i.gkd.li/i/13614090',
-            'https://i.gkd.li/i/21578494',
-          ],
-        },
-      ],
-    },
-    {
-      key: 8,
       name: '分段广告-首页推荐视频卡片广告',
       fastQuery: true,
       activityIds: '.MainActivityV2',
@@ -259,7 +236,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '局部广告-个性化内容推荐弹窗',
       fastQuery: true,
       matchTime: 10000,
@@ -275,7 +252,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
+      key: 9,
       name: '全屏广告-会员弹窗',
       desc: '点击关闭',
       fastQuery: true,
@@ -328,7 +305,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 10,
       name: '全屏广告-分享稿件弹窗',
       desc: '点击关闭',
       matchTime: 10000,
@@ -346,7 +323,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 12,
+      key: 11,
       name: '分段广告-搜索结果广告',
       desc: '点击右下角[菜单]-点击[不感兴趣]',
       fastQuery: true,
@@ -375,7 +352,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
+      key: 12,
       name: '分段广告-视频详情页下方推广',
       desc: '关闭[广告/推广/直播]',
       fastQuery: true,
@@ -441,7 +418,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 14,
+      key: 13,
       name: '功能类-自动关闭故事模式',
       desc: '播放视频时退出竖屏模式',
       matchTime: 10000,
@@ -463,7 +440,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 15,
+      key: 14,
       name: '功能类-自动点击评论区的[展开更多评论]',
       rules: [
         {
@@ -486,7 +463,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
+      key: 15,
       name: '功能类-自动领取会员经验',
       rules: [
         {
@@ -503,7 +480,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 17,
+      key: 16,
       name: '功能类-自动点击查看原图',
       rules: [
         {
@@ -532,7 +509,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 18,
+      key: 17,
       name: '评价提示',
       rules: [
         {
@@ -544,7 +521,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 19,
+      key: 18,
       name: '功能类-直播自动点赞',
       desc: '左下角提示-点击',
       rules: [
@@ -558,7 +535,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 20,
+      key: 19,
       name: '功能类-直播自动投喂粉丝团',
       desc: '左下角提示-点击投喂_需要0.1米谨慎开启(虽然只有一次)',
       matchTime: 10000,
