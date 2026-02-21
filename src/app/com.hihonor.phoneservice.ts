@@ -21,19 +21,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-定位权限',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.hihonor.phoneservice.main.MainActivity',
-          matches:
-            '[text^="开启定位权限"] + [id="com.hihonor.phoneservice:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/12783134',
-        },
-      ],
-    },
   ],
 });
