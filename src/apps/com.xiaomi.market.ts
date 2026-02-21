@@ -62,35 +62,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭按钮',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          name: '升级软件后的"开启推送"弹窗',
-          activityIds: '.ui.UpdateListActivity',
-          matches:
-            '[vid="dialog_cancel" || text="不再提醒"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14814456',
-            'https://i.gkd.li/i/19643114',
-          ],
-        },
-        {
-          key: 1,
-          name: '开启通知栏提醒',
-          matchTime: 10000,
-          activityIds: '.business_ui.main.MarketTabActivity',
-          matches: ['[text="开启通知栏提醒"]', '[text="不了，谢谢"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13691701',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '局部广告-个性化推荐卡片',
       fastQuery: true,
       matchTime: 10000,
@@ -105,7 +76,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '功能类-自动点击[查看全部升级]',
       desc: '应用升级页面',
       actionMaximum: 1,
@@ -130,7 +101,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '功能类-移动数据更新弹窗点击继续',
       rules: [
         {
