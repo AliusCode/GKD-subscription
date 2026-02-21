@@ -99,21 +99,6 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.component.startup.main.MainActivity',
-          matches: '[text="消息通知显示消息内容"] +3 [vid="img_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/14332334',
-        },
-      ],
-    },
-    {
-      key: 5,
       name: '局部广告-帖子详情页卡片广告',
       fastQuery: true,
       rules: [
@@ -134,7 +119,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '全屏广告-送礼开聊会话',
       desc: '自动点击先不聊了',
       fastQuery: true,
@@ -149,7 +134,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '全屏广告-推荐页领金币',
       fastQuery: true,
       matchTime: 10000,
