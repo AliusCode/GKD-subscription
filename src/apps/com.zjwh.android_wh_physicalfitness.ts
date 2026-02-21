@@ -255,45 +255,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '权限提示-不开启可选权限',
-      desc: '点击[暂不开启，继续跑步]',
-      rules: [
-        {
-          key: 0,
-          fastQuery: true,
-          activityIds: '.mvi.home.HomeActivity',
-          matches: [
-            '[text="必要权限未开启！" || text^="当前必要权限不完整"]',
-            '[text^="暂不开启"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/23054372',
-            'https://i.gkd.li/i/23054373',
-          ],
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '权限提示-定位权限',
-      desc: '点击取消',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.mvi.home.HomeActivity',
-          matches: [
-            '[text="定位服务未开启"][visibleToUser=true]',
-            '[text="取消"][visibleToUser=true]',
-          ],
-          exampleUrls: 'https://e.gkd.li/3be509e1-0663-4989-b763-6d68d88979fe',
-          snapshotUrls: 'https://i.gkd.li/i/23096707',
-        },
-      ],
-    },
   ],
 });
