@@ -302,31 +302,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      desc: '点击"取消"',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.widget.ConfirmDialogBuilder',
-            '.pages.main.MainFragmentActivity',
-          ],
-          matches: [
-            '[text="开启推送提醒"][visibleToUser=true]',
-            '[text="取消"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/12716592',
-            'https://i.gkd.li/i/21589667',
-          ],
-        },
-      ],
-    },
-    {
       key: 16,
       name: '功能类-观看广告自动领取奖励',
       rules: [
