@@ -182,28 +182,6 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '权限提示-定位权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      actionMaximumKey: 0,
-      activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
-      rules: [
-        {
-          key: 0,
-          matches: '[text="去开启"] + [id="me.ele:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13710588',
-        },
-        {
-          key: 1,
-          matches: '[text="去开启"] + [id="me.ele:id/close_tips"]',
-          snapshotUrls: 'https://i.gkd.li/i/13710585',
-        },
-      ],
-    },
-    {
-      key: 8,
       name: '通知提示-获取订单信息通知',
       desc: '点击关闭',
       fastQuery: true,
@@ -220,7 +198,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '评价提示-底部调研邀请卡片',
       desc: '点击关闭',
       actionMaximum: 1,
