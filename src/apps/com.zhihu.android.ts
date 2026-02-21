@@ -136,33 +136,6 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 1,
-          activityIds: [
-            '.app.ui.activity.MainActivity',
-            '.mix.activity.ContentMixProfileActivity',
-            '.app.ui.activity.HostActivity',
-          ],
-          matches: [
-            '[text$="内容推送" || text="开启私信通知"]',
-            '[vid="btn_close"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/18057057',
-            'https://i.gkd.li/i/20647853',
-            'https://i.gkd.li/i/22762314',
-          ],
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',
       fastQuery: true,
@@ -200,7 +173,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
       rules: [
@@ -236,7 +209,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '局部广告-信息流广告',
       desc: '点击关闭',
       fastQuery: true,
@@ -285,7 +258,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 6,
       name: '局部广告-悬浮广告',
       fastQuery: true,
       rules: [
@@ -324,7 +297,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 7,
       name: '更新提示',
       matchTime: 10000,
       fastQuery: true,
@@ -358,7 +331,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '功能类-热榜页自动点击[展开更多]',
       rules: [
         {
@@ -372,7 +345,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
+      key: 9,
       name: '功能类-自动展开回答',
       desc: '自动点击展开',
       rules: [
@@ -392,7 +365,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 10,
       name: '评价提示-评论区氛围评价卡片',
       desc: '点击关闭',
       actionMaximum: 1,
