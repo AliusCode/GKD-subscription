@@ -145,22 +145,6 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.app.ui.HomeActivity',
-          matches:
-            '[id="com.baidu.youavideo:id/dialog_open_guide_notification_root"] > [id="com.baidu.youavideo:id/img_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13413819',
-        },
-      ],
-    },
-    {
-      key: 8,
       name: '局部广告-照片页底部浮窗广告',
       rules: [
         {
@@ -173,7 +157,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 8,
       name: '局部广告-卡片广告',
       rules: [
         {
