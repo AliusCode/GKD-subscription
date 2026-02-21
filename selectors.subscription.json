@@ -48,7 +48,7 @@
     {
       "name": "更新排除",
       "order": 80,
-      "selector": "([text*=\"全部\"][text*=\"更新\" || text*=\"忽略\"][text.length<7][visibleToUser=true]) || ([text^=\"继续\" || text^=\"仍然\" || text*=\"权限\"][text.length<6][visibleToUser=true]) || ([text*=\"来源\"][visibleToUser=true])"
+      "selector": "([text*=\"全部\"][text*=\"更新\" || text*=\"忽略\"][text.length<7][visibleToUser=true]) || ([text^=\"继续\" || text^=\"仍然\"][text.length<6][visibleToUser=true]) || ([text*=\"来源\"][visibleToUser=true])"
     },
     {
       "name": "青少年模式1",
