@@ -11,10 +11,12 @@ jobs:
     outputs:
       changed: ${{ steps.changes.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
+      - name: 检出代码
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - id: changes
+      - name: 检测 src 目录变更
+        id: changes
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
               echo "changed=true" >> $GITHUB_OUTPUT
@@ -39,26 +41,32 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - name: 检出代码
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: 设置Node.js环境
+        uses: actions/setup-node@v4
         with:
           node-version: 25
 
-      - uses: pnpm/action-setup@v4
+      - name: 设置pnpm环境
+        uses: pnpm/action-setup@v4
 
-      - run: pnpm install
+      - name: 安装依赖
+        run: pnpm install
 
-      - run: pnpm run build
+      - name: 构建项目
+        run: pnpm run build
 
-      - id: version
+      - name: 获取版本号
+        id: version
         run: |
           version=$(node -e "import('@gkd-kit/tools').then((m) => m.stdoutGkdVersion());")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
-      - name: Git commit
+      - name: 提交代码变更
         id: commit
         run: |
           git config --local user.email github-actions[bot]@users.noreply.github.com
@@ -68,7 +76,7 @@ jobs:
           git commit -a -m "chore: v${{steps.version.outputs.version}}"
         continue-on-error: true
 
-      - name: Git push
+      - name: 推送代码到仓库
         if: ${{ steps.commit.outcome == 'success' }}
         uses: ad-m/github-push-action@master
         with:
@@ -76,7 +84,7 @@ jobs:
           branch: ${{ github.ref }}
           tags: true
 
-      - name: Create Release
+      - name: 创建GitHub Release
         id: create_release
         if: ${{ steps.commit.outcome == 'success' }}
         uses: softprops/action-gh-release@v2
@@ -87,12 +95,12 @@ jobs:
           name: Release ${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
 
-      - name: Publish package
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
-        run: |
-          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
-          pnpm publish --no-git-checks
-          node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
+      #- name: 发布到npm
+      #  env:
+      #    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #  if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
+      #  run: |
+      #    pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+      #    node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
+      #    pnpm publish --no-git-checks
+      #    node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
