@@ -85,7 +85,7 @@ export default defineGkdApp({
     {
       key: 6,
       name: '功能类-去微信小程序签到',
-      desc: '点击【去微信】',
+      desc: '可按需开启微信功能类-小米社区小程序【去签到】',
       rules: [
         {
           action: 'clickCenter',
