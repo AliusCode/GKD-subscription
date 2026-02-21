@@ -6,26 +6,6 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '权限提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.sinovatech.unicom.basic.ui.activity.MainActivity',
-            'com.sinovatech.unicom.basic.ui.activity.WelcomeClient',
-          ],
-          matches: '[text="去开启"] - [vid="custom_dialog_cancel_button"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13331268',
-            'https://i.gkd.li/i/14751210',
-          ],
-        },
-      ],
-    },
-    {
-      key: 2,
       name: '更新提示',
       fastQuery: true,
       matchTime: 10000,
@@ -41,7 +21,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '全屏广告-弹窗广告',
       fastQuery: true,
       matchTime: 10000,
@@ -76,7 +56,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '局部广告-首页右下角卡片悬浮窗',
       desc: '点击关闭',
       rules: [
