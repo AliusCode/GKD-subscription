@@ -6,33 +6,6 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '权限提示-通知权限',
-      desc: '点击[暂不开启]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.widget.MyAlertDialog',
-            '.login.MainGroupActivity',
-            'com.example.advertisement_business.advertisement.AdvertisementActivity',
-          ],
-          matches: [
-            '[text="开启消息推送通知"][visibleToUser=true]',
-            '[text="暂不开启"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13458779',
-            'https://i.gkd.li/i/13623441',
-            'https://i.gkd.li/i/13695447',
-          ],
-        },
-      ],
-    },
-    {
-      key: 2,
       name: '更新提示',
       desc: '点击[忽略]',
       fastQuery: true,
@@ -54,7 +27,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '通知提示-课程提醒',
       desc: '点击[已绑定，不再提示]',
       rules: [
@@ -70,7 +43,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '通知提示-AI分析',
       rules: [
         {
