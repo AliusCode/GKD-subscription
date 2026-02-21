@@ -48,74 +48,6 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          activityIds: [
-            '.AlipayLogin',
-            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$App',
-            'com.alipay.mobile.beehive.cityselect.ui.CeilingHomeCitySelectActivity',
-          ],
-          matches: '@[desc="取消"] + [text*="位置权限"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/caa96cc4-9943-40d8-8cb6-8c89aa60b20f',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18549931',
-            'https://i.gkd.li/i/23415365',
-            'https://i.gkd.li/i/23415366',
-          ],
-        },
-        {
-          key: 1,
-          activityIds: '.AlipayLogin',
-          matches:
-            '@[desc="关闭"] - LinearLayout >(2,4) [text^="定位到" || text^="开启定位权限"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/c153cd53-16a1-4d77-bf99-9cac8821ccf8',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18551258',
-            'https://i.gkd.li/i/19267032',
-            'https://i.gkd.li/i/25041632',
-          ],
-        },
-      ],
-    },
-    {
-      key: 2,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          name: '底部悬浮提示',
-          activityIds: [
-            'com.alipay.android.phone.messageboxapp.ui.MsgBoxTabActivity',
-            'com.eg.android.AlipayGphone.AlipayLogin',
-          ],
-          matches: [
-            '[text^="开启通知权限" || text^="开通推送通知"][visibleToUser=true]',
-            '[id="com.alipay.mobile.antui:id/closeButton"][desc="关闭"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13194955',
-            'https://i.gkd.li/i/16494085',
-          ],
-        },
-        {
-          key: 1,
-          name: '消息页弹窗提示',
-          activityIds:
-            'com.alipay.mobile.rome.pushservice.integration.PushOpenGuideActivity',
-          matches: '[text="选择通知接收范围"] +3 * > [text="暂时不用"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13669620',
-            'https://i.gkd.li/i/14944514',
-          ],
-        },
-      ],
-    },
-    {
-      key: 3,
       name: '更新提示-版本更新弹窗',
       fastQuery: true,
       matchTime: 10000,
@@ -164,7 +96,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 2,
       name: '全屏广告-小组件弹窗',
       desc: '点击[近期不再提醒我]',
       rules: [
@@ -197,7 +129,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 3,
       name: '全屏广告-借呗消费信贷协议',
       desc: '点击X',
       rules: [
@@ -211,7 +143,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 4,
       name: '功能类-支付后自动点击完成',
       fastQuery: true,
       rules: [
@@ -234,7 +166,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 5,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',
       rules: [
@@ -283,7 +215,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
+      key: 6,
       name: '全屏广告-支付后的推荐弹窗',
       desc: '点击关闭',
       rules: [
@@ -306,7 +238,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 7,
       name: '分段广告-扫码乘车后出现的广告',
       desc: '点击[展开更多]-点击[对该内容不感兴趣]',
       fastQuery: true,
@@ -336,7 +268,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
+      key: 8,
       name: '全屏广告-关闭免密支付广告',
       actionMaximum: 1,
       rules: [
@@ -367,7 +299,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 9,
       name: '分段广告-服务消息页面卡片广告',
       desc: '点击关闭-不感兴趣',
       fastQuery: true,
@@ -400,7 +332,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 12,
+      key: 10,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
       fastQuery: true,
@@ -454,7 +386,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
+      key: 11,
       name: '其他-蚂蚁理财社区-[加入同路人]弹窗',
       desc: '点击关闭',
       rules: [
@@ -471,7 +403,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 14,
+      key: 12,
       name: '全屏广告-[银行卡还款服务升级]弹窗',
       desc: '点击[放弃升级，直接付款]',
       rules: [
@@ -487,7 +419,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 15,
+      key: 13,
       name: '开屏广告-小程序开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -506,7 +438,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
+      key: 14,
       name: '功能类-自动授权登录',
       rules: [
         {
@@ -522,7 +454,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 17,
+      key: 15,
       name: '局部广告-直播悬浮窗',
       desc: '点击关闭',
       rules: [
@@ -552,7 +484,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 18,
+      key: 16,
       name: '功能类-余额宝转出自动勾选[短期不再提示]',
       actionMaximum: 1,
       resetMatch: 'activity',
@@ -573,7 +505,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 19,
+      key: 17,
       name: '功能类-自动领取会员积分',
       desc: '点击[全部领取]',
       rules: [
@@ -592,7 +524,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 20,
+      key: 18,
       name: '功能类-无法访问时点击[返回]',
       rules: [
         {
@@ -619,7 +551,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 21,
+      key: 19,
       name: '其他-滑动验证时返回',
       rules: [
         {
@@ -635,7 +567,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 22,
+      key: 20,
       name: '其他-开通刷脸支付弹窗',
       desc: '点击关闭',
       rules: [
@@ -651,7 +583,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 23,
+      key: 21,
       name: '功能类-确认清理已选中的缓存',
       rules: [
         {
@@ -668,7 +600,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 24,
+      key: 22,
       name: '青少年模式',
       rules: [
         {
