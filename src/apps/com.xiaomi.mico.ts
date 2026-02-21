@@ -20,20 +20,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '权限提示-请求开启定位权限弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.main.MainActivity',
-          matches: ['[text*="开启位置服务"]', '[text="取消"]'],
-          snapshotUrls: 'https://i.gkd.li/i/15284753',
-        },
-      ],
-    },
   ],
 });
