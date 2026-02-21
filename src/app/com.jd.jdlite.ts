@@ -18,20 +18,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainFrameActivity',
-          matches:
-            '@ImageView[clickable=true] - LinearLayout > [text="开启消息通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13062969',
-        },
-      ],
-    },
   ],
 });
