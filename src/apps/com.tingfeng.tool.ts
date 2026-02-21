@@ -49,10 +49,18 @@ export default defineGkdApp({
           fastQuery: true,
           action: 'clickCenter',
           activityIds: 'app.video.guoguo.MainActivity',
-          matches:
+          anyMatches: [
+            '[vid="ms_splash_image"] + [vid="ms_skipView"]',
             'FrameLayout > [text*="跳过"][clickable=true][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/75e80f11-01b5-4959-864d-1b81df7402cd',
-          snapshotUrls: 'https://i.gkd.li/i/25444847',
+          ],
+          exampleUrls: [
+            'https://e.gkd.li/a591ff73-91c1-4b64-ae6a-a4c1d4f1ba4a',
+            'https://e.gkd.li/75e80f11-01b5-4959-864d-1b81df7402cd',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/25458886',
+            'https://i.gkd.li/i/25444847',
+          ],
         },
       ],
     },
