@@ -6,22 +6,6 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          action: 'back',
-          fastQuery: true,
-          activityIds: 'org.telegram.ui.LaunchActivity',
-          matches: '[text="打开通知"] + [text*="打开 Telegram 的通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/22850638',
-        },
-      ],
-    },
-    {
-      key: 2,
       name: '其他-添加生日提示',
       desc: '点击关闭',
       rules: [
@@ -34,7 +18,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '局部广告-拍卖提示',
       rules: [
         {
@@ -47,7 +31,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
+      key: 3,
       name: '其他-首页公告栏',
       desc: '此规则覆盖生日提示、拍卖提示以及部分广告',
       rules: [
