@@ -21,21 +21,6 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches:
-            '[text="去开启"][clickable=true] +2 @FrameLayout[clickable=true] > ImageView',
-          action: 'clickCenter', // clickNode无响应
-          snapshotUrls: 'https://i.gkd.li/i/12727070',
-        },
-      ],
-    },
-    {
-      key: 3,
       name: '局部广告-关闭[签到开红包]',
       desc: '点击右下角悬浮图片右上角的x图标',
       activityIds: ['com.dianping.v1.NovaMainActivity'],
@@ -44,7 +29,7 @@ export default defineGkdApp({
       snapshotUrls: 'https://i.gkd.li/i/12727366',
     },
     {
-      key: 4,
+      key: 3,
       name: '全屏广告-弹窗广告',
       rules: [
         {
@@ -57,7 +42,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: '分段广告-推荐页卡片广告',
       rules: [
         {
@@ -94,7 +79,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
+      key: 5,
       name: '功能类-选择地图时自动点击[更多]',
       rules: [
         {
