@@ -82,28 +82,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 6,
-      name: '功能类-去微信小程序签到',
-      desc: '可按需开启微信功能类-小米社区小程序【去签到】',
-      rules: [
-        {
-          action: 'clickCenter',
-          activityIds: '.newbrowser.NormalWebActivity',
-          matches: [
-            '[text="已签到"][clickable=false][visibleToUser=false]',
-            '[desc="去微信"][clickable=true][visibleToUser=true]',
-          ],
-          exampleUrls: [
-            'https://e.gkd.li/e4814c1d-e6ae-49cf-aa0c-b7331139d1ff',
-            'https://e.gkd.li/06036a8d-cb0f-4291-9ce6-dec54084b460',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/25458816',
-            'https://i.gkd.li/i/25458818',
-          ],
-        },
-      ],
-    },
   ],
 });
