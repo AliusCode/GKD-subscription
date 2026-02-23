@@ -66,6 +66,7 @@ export default defineGkdApp({
       key: 3,
       name: '功能类-立即签到',
       desc: '点击【签到】',
+      actionDelay: 1000, // 点击【立即签到】后，UI需要时间变化，否则会触发二次点击【立即签到】导致无法触发【领取VIP】
       rules: [
         {
           fastQuery: true,
