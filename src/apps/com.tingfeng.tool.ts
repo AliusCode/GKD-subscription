@@ -94,5 +94,26 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '全屏广告-领取VIP后',
+      desc: '关闭广告',
+      rules: [
+        {
+          key: 1,
+          activityIds: 'com.kwad.sdk.api.proxy.app.KsRewardVideoActivity',
+          anyMatches: [
+            '@ViewGroup[clickable=true] < [desc="close_button"]',
+            '[desc="skip_button"] >n [text="跳过"]',
+          ],
+          excludeMatches: [
+            '[text^="1" || text^="2"][visibleToUser=true]',
+            '[desc="skip_button"] >n [text="跳过"]',
+          ],
+          exampleUrls: 'https://e.gkd.li/68ff3fe9-291b-4671-af8b-13c864d71feb',
+          snapshotUrls: 'https://i.gkd.li/i/25481637',
+        },
+      ],
+    },
   ],
 });
