@@ -31,7 +31,6 @@ export default defineGkdApp({
         {
           key: 2,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds:
             'com.beizi.ad.internal.activity.BeiZiInterstitialActivity',
           matches: '[vid="beizi_interstitial_ad_close_iv"][visibleToUser=true]',
@@ -47,7 +46,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: 'app.video.guoguo.MainActivity',
           anyMatches: [
             '[vid="ms_splash_image"] + [vid="ms_skipView"]',
@@ -68,9 +66,6 @@ export default defineGkdApp({
       key: 3,
       name: '功能类-立即签到',
       desc: '点击【签到】',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
@@ -86,9 +81,10 @@ export default defineGkdApp({
       key: 4,
       name: '功能类-领取VIP',
       desc: '需开启【立即签到】，签到后点击【领取VIP】',
+      actionDelay: 500,
       rules: [
         {
-          preKeys: 2,
+          preKeys: 3,
           activityIds: 'app.video.guoguo.MainActivity',
           matches:
             'View[desc="今日已签到"][clickable=true][visibleToUser=true] > @Button[desc="看广告视频，领取尊贵VIP"][clickable=true][visibleToUser=true]',
