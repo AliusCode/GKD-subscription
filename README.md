@@ -60,7 +60,7 @@ https://aliuscode-gkd-subscription.pages.dev/AliusCode_gkd.json5
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v12
+- 当前版本: v13
 
 - 当前订阅文件已适配 231 个应用，共有 640 应用规则组，3 全局规则组
 
@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=12)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=13)
 
 ## Star History
 
