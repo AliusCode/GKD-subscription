@@ -72,10 +72,11 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.activity.SplashActivity',
           matches:
-            '@ImageView[desc="关闭"][clickable=true][childCount=0] -2 [text$="试用超级会员" || text$="回归有礼"][visibleToUser=true]',
+            '@ImageView[desc="关闭"][clickable=true][childCount=0] -2 [text*="会员" || text*="回归"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/23837678',
             'https://i.gkd.li/i/25482102',
+            'https://i.gkd.li/i/25677403',
           ],
         },
         {
