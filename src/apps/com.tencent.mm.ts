@@ -776,6 +776,8 @@ export default defineGkdApp({
           activityIds: '.plugin.appbrand.ui.AppBrandUI',
           matches:
             '@CheckBox[clickable=true][visibleToUser=true] < View + [text="一键登录"]',
+          snapshotUrls: 'https://i.gkd.li/i/25681528',
+          exampleUrls: 'https://e.gkd.li/511782ad-f986-4c00-ad0c-b7b336c17534',
         },
         {
           key: 3,
@@ -787,6 +789,8 @@ export default defineGkdApp({
             '[text="小米社区"][visibleToUser=true]',
             '@Button[text="一键登录"][clickable=true][visibleToUser=true]',
           ],
+          snapshotUrls: 'https://i.gkd.li/i/25681609',
+          exampleUrls: 'https://e.gkd.li/7db05a01-498f-4931-9b8f-cc2a2712e90e',
         },
       ],
     },
