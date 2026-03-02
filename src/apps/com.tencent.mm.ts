@@ -726,7 +726,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.plugin.appbrand.ui.AppBrandUI00',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
           matches: [
             '[text="广告"][visibleToUser=true]',
             '[text="已获得奖励"][visibleToUser=true]',
@@ -743,11 +743,50 @@ export default defineGkdApp({
       desc: '点击【去签到】',
       rules: [
         {
-          action: 'clickCenter',
-          activityIds: '.plugin.appbrand.ui.AppBrandUI00',
+          key: 1,
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
           matches: '[text="每日签到"] < View + [text="去签到"]',
           exampleUrls: 'https://e.gkd.li/9359c575-33f4-4dcd-b2c1-121171ead1e2',
           snapshotUrls: 'https://i.gkd.li/i/25444607',
+        },
+      ],
+    },
+    {
+      key: 24,
+      name: '功能类-小米社区小程序【自动登录】',
+      desc: '点击【登录】，有概率会点击失败',
+      rules: [
+        {
+          key: 1,
+          actionDelay: 1000,
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
+          matches: [
+            '[text="未登录账号"][visibleToUser=true]',
+            '[text="登录账号，获取更多精彩内容"][visibleToUser=true]',
+            '[text="登录"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/baf46163-f491-428c-a639-72cf08f28ee8',
+          snapshotUrls: 'https://i.gkd.li/i/25680845',
+        },
+        {
+          key: 2,
+          preKeys: 1,
+          actionDelay: 1000,
+          action: 'clickCenter',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
+          matches:
+            '@CheckBox[clickable=true][visibleToUser=true] < View + [text="一键登录"]',
+        },
+        {
+          key: 3,
+          preKeys: 2,
+          actionDelay: 1000,
+          action: 'clickCenter',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
+          matches: [
+            '[text="小米社区"][visibleToUser=true]',
+            '@Button[text="一键登录"][clickable=true][visibleToUser=true]',
+          ],
         },
       ],
     },
