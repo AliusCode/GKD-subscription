@@ -42,6 +42,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18138903',
             'https://i.gkd.li/i/21623147',
             'https://i.gkd.li/i/25174203',
+            'https://i.gkd.li/i/25757187',
           ],
         },
         {
@@ -80,16 +81,6 @@ export default defineGkdApp({
             '@ImageView[clickable=true] +n ViewGroup[visibleToUser=true] > [text="原著改编"]',
           exampleUrls: 'https://e.gkd.li/f838939f-d42d-4bf8-9a68-59f4d4ec0d9b',
           snapshotUrls: 'https://i.gkd.li/i/24706223',
-        },
-        {
-          key: 6,
-          name: '番茄音乐广告-点击[x]',
-          fastQuery: true,
-          activityIds: '.reader.ui.ReaderActivity',
-          matches:
-            '@ImageView[clickable=true] - LinearLayout[visibleToUser=true] >2 [text^="番茄音乐"]',
-          exampleUrls: 'https://e.gkd.li/a9fd956f-1123-4a01-9550-c9de250cc232',
-          snapshotUrls: 'https://i.gkd.li/i/25757187',
         },
       ],
     },
