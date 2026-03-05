@@ -13,10 +13,10 @@
 | 项目 | 数量 |
 | :---: | :---: |
 | 原仓库共 | **886** 个应用 |
-| 筛选了 | **450** 个应用 |
+| 筛选了 | **451** 个应用 |
 | 删除了 | **219** 个应用 |
-| 留存了 | **231** 个应用 |
-| 剩余了 | **436** 个应用 |
+| 留存了 | **232** 个应用 |
+| 剩余了 | **435** 个应用 |
 
 </div>
 
@@ -60,9 +60,9 @@ https://aliuscode-gkd-subscription.pages.dev/AliusCode_gkd.json5
 https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode_gkd.json5
 ```
 
-- 当前版本: v15
+- 当前版本: v16
 
-- 当前订阅文件已适配 231 个应用，共有 640 应用规则组，3 全局规则组
+- 当前订阅文件已适配 232 个应用，共有 650 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/AliusCode/GKD-subscription/main/dist/AliusCode
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=15)
+![img](https://contrib.rocks/image?repo=AliusCode/GKD-subscription&_v=16)
 
 ## Star History
 
