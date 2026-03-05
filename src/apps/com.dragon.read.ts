@@ -35,10 +35,9 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           matches:
-            '@ImageView[childCount=0][clickable=true][visibleToUser=true] - LinearLayout >(2,3) [text="广告" || text="立享优惠" || text*="查看" || text^="立即" || text$="参与"][text.length<5]',
+            '@ImageView[childCount=0][clickable=true][width<100 && height<100] - LinearLayout >(2,3) [text*="查看" || text*="详情" || text*="立享" || text*="优惠" || text*="立即" || text*="前往" || text*="下载" || text*="马上" || text*="参与"][text.length<5]',
           snapshotUrls: [
             'https://i.gkd.li/i/12908734',
-            'https://i.gkd.li/i/14540281',
             'https://i.gkd.li/i/18138903',
             'https://i.gkd.li/i/21623147',
             'https://i.gkd.li/i/25174203',
