@@ -411,9 +411,15 @@ export default defineGkdApp({
         {
           preKeys: [1],
           key: 2,
-          matches: '[vid="close_dislike"][visibleToUser=true]',
+          anyMatches: [
+            '[vid="close_dislike"][visibleToUser=true]',
+            '@[text="关闭"][clickable=true] -n * <<(2,4) [name$="ComposeView" || name$="FrameLayout"] <n [vid="recycler"]',
+          ],
           exampleUrls: 'https://e.gkd.li/80514576-3656-4dcc-89f5-5992803c8e77',
-          snapshotUrls: 'https://i.gkd.li/i/18587456',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18587456',
+            'https://i.gkd.li/i/25739074',
+          ],
         },
       ],
     },
