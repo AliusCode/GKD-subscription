@@ -81,6 +81,16 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/f838939f-d42d-4bf8-9a68-59f4d4ec0d9b',
           snapshotUrls: 'https://i.gkd.li/i/24706223',
         },
+        {
+          key: 6,
+          name: '番茄音乐广告-点击[x]',
+          fastQuery: true,
+          activityIds: '.reader.ui.ReaderActivity',
+          matches:
+            '@ImageView[clickable=true] - LinearLayout[visibleToUser=true] >2 [text^="番茄音乐"]',
+          exampleUrls: 'https://e.gkd.li/a9fd956f-1123-4a01-9550-c9de250cc232',
+          snapshotUrls: 'https://i.gkd.li/i/25757187',
+        },
       ],
     },
     {
@@ -302,7 +312,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
+      key: 7,
       name: '功能类-观看广告自动领取奖励',
       rules: [
         {
@@ -349,7 +359,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 17,
+      key: 8,
       name: '评价提示-点评此书弹窗',
       desc: '点击[取消]',
       actionMaximum: 1,
