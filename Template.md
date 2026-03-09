@@ -54,6 +54,12 @@
 https://aliuscode-gkd-subscription.pages.dev/AliusCode_gkd.json5
 ```
 
+- Gitee源（国内源，不太稳定）
+
+```txt
+https://gitee.com/AliusCode/GKD-subscription/raw/main/dist/AliusCode_gkd.json5
+```
+
 - GitHub源
 
 ```txt
