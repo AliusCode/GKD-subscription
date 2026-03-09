@@ -104,3 +104,25 @@ jobs:
       #    node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
       #    pnpm publish --no-git-checks
       #    node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
+
+  sync_to_gitee:
+    needs: build_release
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码（包含构建过程的提交）
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: 配置 Git 用户信息
+        run: |
+          git config --local user.email github-actions[bot]@users.noreply.github.com
+          git config --local user.name github-actions[bot]
+
+      - name: 同步代码到 Gitee
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          git remote add gitee https://AliusCode:${GITEE_TOKEN}@gitee.com/AliusCode/GKD-subscription.git || git remote set-url gitee https://AliusCode:${GITEE_TOKEN}@gitee.com/AliusCode/GKD-subscription.git
+          git push --mirror gitee
